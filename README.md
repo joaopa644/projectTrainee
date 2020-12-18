@@ -1,1 +1,2 @@
 # projectTrainee
+Projeto com dois consoles que no qual o primeiro, client, que realiza a leitura de uma log padrão do Squid, organiza os dados em uma estrutura e envia serializado, em binário, através de procolo tcp para o segundo console, server, que por sua vez desserializa as dados e os salvam em banco de dados. Após a término do processo é disparado um email, via event bus, com as insformações de todo o processo, desde a leitura dos dados até o registro no banco.
