@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace project_client.DTS
+namespace project_client.DTO
 {   
     [Serializable]
-    public struct SquidLogDTS 
+    public class SquidLogLineDTO 
     { 
         public string Time { get; set; }
         public string Duration { get; set; }
@@ -15,5 +15,6 @@ namespace project_client.DTS
         public string User { get; set; }
         public string HierarchyCode { get; set; }
         public string Type { get; set; }
+        public TimeSpan ObjectGeneratingTime { get; set; }
     }
 }

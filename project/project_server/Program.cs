@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading.Tasks;
-using AnySerializer.Extensions;
+using System.Runtime.Serialization.Formatters.Binary;
 using Dapper;
-using project_server.Models;
+using project_client.DTO;
 
 namespace project_server
 {
@@ -36,7 +36,7 @@ namespace project_server
 
                     NetworkStream stream = client.GetStream();
 
-                    ReceberDadosLog(stream);
+                    SaveDataLog(stream);
 
                     client.Close();
                 }
@@ -64,25 +64,46 @@ namespace project_server
             return new TcpListener(IPAddress.Parse(localAdress), port);
         }
 
-        private static void ReceberDadosLog(NetworkStream stream) 
+        private static void SaveDataLog(NetworkStream stream) 
         {
-            var connection = AbrirConexao();
-
+            string stringConnection = "User ID=sa;password=Senha_150189;Initial Catalog=SQUID;Data Source=tcp:.,1433";
             byte[] dataReceived = new byte[1024];
-            List<SquidLogDTS> data = new List<SquidLogDTS>();
+            TimeSpan generateObjectsTime = new TimeSpan();
+            TimeSpan transferTime = new TimeSpan();
+            TimeSpan totalTime = new TimeSpan();
+            var stopwatch = new Stopwatch();
+            int totalRegister = 0;
 
-            while ((stream.Read(dataReceived, 0, dataReceived.Length)) != 0)
+            using (var connection = new SqlConnection(stringConnection))
             {
-                SaveLog(dataReceived.Deserialize<SquidLogDTS>(), connection);
-                byte[] response = PrepareMessaResponse("Deu Certo");
-                stream.Write(response, 0, response.Length);
+                while ((stream.Read(dataReceived, 0, dataReceived.Length)) != 0)
+                {
+                    stopwatch.Start();
+                    var lineLog = Deserialize(dataReceived);
+                    generateObjectsTime.Add(lineLog.ObjectGeneratingTime);
+                    ExecutesSQL(lineLog, connection);
+                    byte[] response = PrepareMessaResponse("Deu Certo");
+                    stream.Write(response, 0, response.Length);
+                    totalRegister++;
+                }
+                stopwatch.Stop();
+                transferTime.Add(stopwatch.Elapsed);
+                totalTime = transferTime + generateObjectsTime;
             }
-
-            FecharConexao(connection);
         }
 
+        private static SquidLogLineDTO Deserialize(byte[] obj)
+        {
+            var stream = new MemoryStream();
+            var formatter = new BinaryFormatter();
 
-        private static void SaveLog(SquidLogDTS obj, SqlConnection connection)
+            stream.Write(obj, 0, obj.Length);
+            stream.Position = 0;
+
+            return formatter.Deserialize(stream) as SquidLogLineDTO;
+        }
+
+        private static void ExecutesSQL(SquidLogLineDTO obj, SqlConnection connection)
         {
             
             string sql = @"INSERT INTO DEFAULTLOG(TIME, DURATION, CLIENT_ADRESS, RESULT_CODE, BYTES, REQUEST_METHOD, URL, USER_REQUEST,HIERARCHY_CODE,TYPE) 
@@ -102,17 +123,6 @@ namespace project_server
                 Type = obj.Type
             });
             
-        }
-
-        private static SqlConnection AbrirConexao()
-        {
-            string stringConnection = "User ID=sa;password=Senha_150189;Initial Catalog=SQUID;Data Source=tcp:.,1433";
-            return new SqlConnection(stringConnection);
-        }
-
-        private static void FecharConexao(SqlConnection connection)
-        {
-            connection.Close();
         }
     }
 }

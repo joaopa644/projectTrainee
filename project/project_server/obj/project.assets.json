@@ -160,6 +160,19 @@
             "rid": "win"
           }
         }
+      },
+      "project-client/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AnySerializer": "1.1.46"
+        },
+        "compile": {
+          "bin/placeholder/project-client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/project-client.dll": {}
+        }
       }
     }
   },
@@ -569,13 +582,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "project-client/1.0.0": {
+      "type": "project",
+      "path": "../project-client/project-client.csproj",
+      "msbuildProject": "../project-client/project-client.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AnySerializer >= 1.1.46",
       "Dapper >= 2.0.78",
-      "System.Data.SqlClient >= 4.8.2"
+      "System.Data.SqlClient >= 4.8.2",
+      "project-client >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -604,7 +623,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\project-client.csproj": {
+              "projectPath": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\project-client.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
