@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.Mail;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using Dapper;
@@ -89,6 +90,8 @@ namespace project_server
                 stopwatch.Stop();
                 transferTime.Add(stopwatch.Elapsed);
                 totalTime = transferTime + generateObjectsTime;
+
+                SendEmail();
             }
         }
 
@@ -123,6 +126,35 @@ namespace project_server
                 Type = obj.Type
             });
             
+        }
+
+
+        private static void SendEmail()
+        {
+            string to = "joaopa644@gmail.com";
+            string from = "joaopa644@hotmail.com";
+            MailMessage message = new MailMessage(from, to);
+            message.Subject = "Using the new SMTP client.";
+            message.Body = @"Using this new feature, you can send an email message from an application very easily.";
+            SmtpClient client = new SmtpClient()
+            {
+                Host = "smtp-mail.outlook.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential("joaopa644@hotmail.com", "Tex@916482463722")
+            };
+
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception caught in CreateTestMessage2(): {0}",
+                    ex.ToString());
+            }
         }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace project_server.Models
 {
-    public class SquidLogDTS
+    [Serializable]
+    public class SquidLogLineDTO
     {
         public string Time { get; set; }
         public string Duration { get; set; }
@@ -16,5 +15,6 @@ namespace project_server.Models
         public string User { get; set; }
         public string HierarchyCode { get; set; }
         public string Type { get; set; }
+        public TimeSpan ObjectGeneratingTime { get; set; }
     }
 }

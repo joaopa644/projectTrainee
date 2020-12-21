@@ -20,3 +20,28 @@ C:\Users\Joao Pedro Alves\source\repos\project_server\project_server\bin\Debug\n
 C:\Users\Joao Pedro Alves\source\repos\project_server\project_server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Joao Pedro Alves\source\repos\project_server\project_server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Joao Pedro Alves\source\repos\project_server\project_server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.csprojAssemblyReference.cache
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.AssemblyInfoInputs.cache
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.AssemblyInfo.cs
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.csproj.CoreCompileInputs.cache
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.pdb
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project-client.exe
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.exe
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.deps.json
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.runtimeconfig.json
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.runtimeconfig.dev.json
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project_server.pdb
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\AnySerializer.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project-client.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project-client.pdb
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.csproj.CopyComplete
+C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.genruntimeconfig.cache

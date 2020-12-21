@@ -28,3 +28,18 @@ C:\Users\Joao Pedro Alves\source\repos\project_server\project-client\obj\Debug\n
 C:\Users\Joao Pedro Alves\source\repos\project_server\project-client\obj\Debug\netcoreapp3.1\project-client.dll
 C:\Users\Joao Pedro Alves\source\repos\project_server\project-client\obj\Debug\netcoreapp3.1\project-client.pdb
 C:\Users\Joao Pedro Alves\source\repos\project_server\project-client\obj\Debug\netcoreapp3.1\project-client.genruntimeconfig.cache
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.exe
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.deps.json
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.runtimeconfig.json
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.runtimeconfig.dev.json
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.dll
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\project-client.pdb
+C:\branchs\firstVersion\projectTrainee\project\project-client\bin\Debug\netcoreapp3.1\AnySerializer.dll
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.csprojAssemblyReference.cache
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.AssemblyInfoInputs.cache
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.AssemblyInfo.cs
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.csproj.CoreCompileInputs.cache
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.csproj.CopyComplete
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.dll
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.pdb
+C:\branchs\firstVersion\projectTrainee\project\project-client\obj\Debug\netcoreapp3.1\project-client.genruntimeconfig.cache
