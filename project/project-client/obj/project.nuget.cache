@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L5K1UbYsNjv58w2Eu87n9yLrIJFb/yMJUqYEnxxpvAs3yK6Kyl62cf49XwfefRmFm8w8y7FAGDHEdIgx40uZeg==",
+  "success": true,
+  "projectFilePath": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\project-client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\anyserializer\\1.1.46\\anyserializer.1.1.46.nupkg.sha512"
+  ],
+  "logs": []
+}

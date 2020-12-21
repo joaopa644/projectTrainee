@@ -1,0 +1,104 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "AnySerializer/1.1.46": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AnySerializer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AnySerializer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AnySerializer/1.1.46": {
+      "sha512": "b8A0JgaU6x6aQS42G58s62rUKC0xmQy0Z64T9LPVCKecuarTsD/ZtCMjAy8eORcnj/h6gyCwspcz3r26hW9i+Q==",
+      "type": "package",
+      "path": "anyserializer/1.1.46",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "anyserializer.1.1.46.nupkg.sha512",
+        "anyserializer.nuspec",
+        "lib/net45/AnySerializer.dll",
+        "lib/net46/AnySerializer.dll",
+        "lib/net461/AnySerializer.dll",
+        "lib/net462/AnySerializer.dll",
+        "lib/net47/AnySerializer.dll",
+        "lib/net48/AnySerializer.dll",
+        "lib/netstandard2.0/AnySerializer.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "AnySerializer >= 1.1.46"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\project-client.csproj",
+      "projectName": "project-client",
+      "projectPath": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\project-client.csproj",
+      "packagesPath": "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\",
+      "outputPath": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project-client\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Joao Pedro Alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "AnySerializer": {
+            "target": "Package",
+            "version": "[1.1.46, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
