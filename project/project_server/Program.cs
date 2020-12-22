@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
@@ -8,6 +9,8 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using Dapper;
 using project_client.DTO;
+using project_server.Setting;
+using Z.Dapper.Plus;
 
 namespace project_server
 {
@@ -15,10 +18,8 @@ namespace project_server
     {
         static void Main(string[] args)
         {
-            Int32 port = 13000;
-            IPAddress localAddr = IPAddress.Parse("127.0.0.1");
 
-            StartListener(CreateServer(port, "127.0.0.1"));
+            StartListener(CreateServer(ProjectSetting.ServerPort, ProjectSetting.ServerIp));
         }
 
         private static void StartListener(TcpListener server)
@@ -60,38 +61,36 @@ namespace project_server
             return System.Text.Encoding.ASCII.GetBytes(message);
         }
 
-        private static TcpListener CreateServer(Int32 port, string localAdress)
+        private static TcpListener CreateServer(Int32 port, IPAddress localAdress)
         {
-            return new TcpListener(IPAddress.Parse(localAdress), port);
+            return new TcpListener(localAdress, port);
         }
 
         private static void SaveDataLog(NetworkStream stream) 
         {
-            string stringConnection = "User ID=sa;password=Senha_150189;Initial Catalog=SQUID;Data Source=tcp:.,1433";
             byte[] dataReceived = new byte[1024];
             TimeSpan generateObjectsTime = new TimeSpan();
-            TimeSpan transferTime = new TimeSpan();
-            TimeSpan totalTime = new TimeSpan();
+            List<SquidLogLineDTO> listObj = new List<SquidLogLineDTO>();
             var stopwatch = new Stopwatch();
             int totalRegister = 0;
 
-            using (var connection = new SqlConnection(stringConnection))
+            using (var connection = new SqlConnection(ProjectSetting.DataBaseConnectionString))
             {
                 while ((stream.Read(dataReceived, 0, dataReceived.Length)) != 0)
                 {
                     stopwatch.Start();
                     var lineLog = Deserialize(dataReceived);
-                    generateObjectsTime.Add(lineLog.ObjectGeneratingTime);
-                    ExecutesSQL(lineLog, connection);
+                    generateObjectsTime += lineLog.ObjectGeneratingTime;
+                    //ExecutesSQL(lineLog, connection);
+                    listObj.Add(lineLog);
                     byte[] response = PrepareMessaResponse("Deu Certo");
                     stream.Write(response, 0, response.Length);
                     totalRegister++;
                 }
+                ExecuteSQLMany(listObj,connection);
                 stopwatch.Stop();
-                transferTime.Add(stopwatch.Elapsed);
-                totalTime = transferTime + generateObjectsTime;
 
-                SendEmail();
+                SendEmail(stopwatch.Elapsed  + generateObjectsTime, stopwatch.Elapsed, generateObjectsTime, totalRegister);
             }
         }
 
@@ -121,21 +120,29 @@ namespace project_server
                 Bytes = obj.Bytes,
                 RequestMethod = obj.RequestMethod,
                 Url = obj.URL,
-                UserRequest = obj.User,
+                UserRequest = obj.UserRequest,
                 HierarchyCode = obj.HierarchyCode,
                 Type = obj.Type
             });
             
         }
 
-
-        private static void SendEmail()
+        private static void ExecuteSQLMany(List<SquidLogLineDTO> objs, SqlConnection connection)
         {
-            string to = "joaopa644@gmail.com";
-            string from = "joaopa644@hotmail.com";
-            MailMessage message = new MailMessage(from, to);
-            message.Subject = "Using the new SMTP client.";
-            message.Body = @"Using this new feature, you can send an email message from an application very easily.";
+            DapperPlusManager.Entity<SquidLogLineDTO>().Table("DEFAULTLOG");
+            connection.BulkInsert(objs);
+        }
+
+
+        private static void SendEmail(TimeSpan totalTime, TimeSpan transferTime, TimeSpan generateObjectsTime, int totalRegister)
+        {
+            MailMessage message = new MailMessage(ProjectSetting.EmailFrom, ProjectSetting.EmailTo);
+            message.Subject = "Informações do processo de envio e recebimento dos dados.";
+            message.Body = @$"Tempo leitura no client: {generateObjectsTime}. 
+                            Tempo parse do arquivo para objetos: {generateObjectsTime}. 
+                            Tempo de transferencia: {transferTime}. 
+                            Total do processo: {totalTime}.
+                            Total de registros: {totalRegister}";
             SmtpClient client = new SmtpClient()
             {
                 Host = "smtp-mail.outlook.com",
@@ -143,7 +150,7 @@ namespace project_server
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("joaopa644@hotmail.com", "Tex@916482463722")
+                Credentials = new NetworkCredential(ProjectSetting.EmailFrom, ProjectSetting.EmailFromPassword)
             };
 
             try

@@ -11,6 +11,7 @@
           "AnySerializer": "1.1.46",
           "Dapper": "2.0.78",
           "System.Data.SqlClient": "4.8.2",
+          "Z.Dapper.Plus": "3.0.29",
           "project-client": "1.0.0"
         },
         "runtime": {
@@ -36,11 +37,20 @@
           }
         }
       },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.Win32.Registry/4.7.0": {
         "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0"
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.2.21924"
+          }
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -74,6 +84,18 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
           }
         }
       },
@@ -111,7 +133,47 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
       "System.Security.Principal.Windows/4.7.0": {},
+      "Z.Dapper.Plus/3.0.29": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Z.Dapper.Plus.dll": {
+            "assemblyVersion": "3.0.29.0",
+            "fileVersion": "3.0.29.0"
+          }
+        }
+      },
       "project-client/1.0.0": {
         "dependencies": {
           "AnySerializer": "1.1.46"
@@ -142,6 +204,13 @@
       "path": "dapper/2.0.78",
       "hashPath": "dapper.2.0.78.nupkg.sha512"
     },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -155,6 +224,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
@@ -184,6 +260,13 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
     "System.Data.SqlClient/4.8.2": {
       "type": "package",
       "serviceable": true,
@@ -205,12 +288,33 @@
       "path": "system.security.accesscontrol/4.7.0",
       "hashPath": "system.security.accesscontrol.4.7.0.nupkg.sha512"
     },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
     "System.Security.Principal.Windows/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "Z.Dapper.Plus/3.0.29": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mcV07l9Aohh3e1+hjhZ1w0o+ByOq4zzpbSYK4rEszYcn1ZJyix7K+iKi+Neez8u5WjWqfx3HlKlyxqDuOCNd5A==",
+      "path": "z.dapper.plus/3.0.29",
+      "hashPath": "z.dapper.plus.3.0.29.nupkg.sha512"
     },
     "project-client/1.0.0": {
       "type": "project",

@@ -45,3 +45,9 @@ C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcorea
 C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\project-client.pdb
 C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.csproj.CopyComplete
 C:\branchs\firstVersion\projectTrainee\project\project_server\obj\Debug\netcoreapp3.1\project_server.genruntimeconfig.cache
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\Z.Dapper.Plus.dll
+C:\branchs\firstVersion\projectTrainee\project\project_server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Diagnostics;
 using project_client.DTO;
+using project_client.Setting;
 
 namespace project_client
 {
@@ -12,15 +13,11 @@ namespace project_client
     {
         static void Main(string[] args)
         {
-            string arquivo = @"../../../file/access.log";
-            string server = "127.0.0.1";
-            Int32 port = 13000;
-
-            if (File.Exists(arquivo))
+            if (File.Exists(ProjectSetting.localFile))
             {
                 try
                 {
-                    SendDataLog(arquivo, server, port);
+                    SendDataLog(ProjectSetting.localFile, ProjectSetting.ServerAdress, ProjectSetting.Port);
                 }
                 catch(Exception ex)
                 {
@@ -29,7 +26,7 @@ namespace project_client
             }
             else
             {
-                Console.WriteLine("O arquivo " + arquivo + " não foi localizado");
+                Console.WriteLine("O arquivo " + ProjectSetting.localFile + " não foi localizado");
             }
             Console.ReadKey();
         }
@@ -79,7 +76,7 @@ namespace project_client
                 Bytes = arrayItem[4],
                 RequestMethod = arrayItem[5],
                 URL = arrayItem[6],
-                User = arrayItem[7],
+                UserRequest = arrayItem[7],
                 HierarchyCode = arrayItem[8],
                 Type = arrayItem[9],
                 ObjectGeneratingTime = time

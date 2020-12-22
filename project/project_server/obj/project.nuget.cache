@@ -1,21 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "6t0ORWE9Fm86m4/9Ij2q2motP0cbV7dg2oPekO5bkRd6JJ4TQXTFn32miPCmOkSgA8LiSwHMFtcAwXHM+gqr1w==",
+  "dgSpecHash": "7Gzev+MOBWP+qUKN3Q0Okvf9WFnghCDgMzbauZ7HxxQFNTo32TvPPXpY5wZUrtMV0QepvaySrLtNJZ9UTQGgEg==",
   "success": true,
   "projectFilePath": "C:\\branchs\\firstVersion\\projectTrainee\\project\\project_server\\project_server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\anyserializer\\1.1.46\\anyserializer.1.1.46.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.data.sqlclient\\4.8.2\\system.data.sqlclient.4.8.2.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Joao Pedro Alves\\.nuget\\packages\\z.dapper.plus\\3.0.29\\z.dapper.plus.3.0.29.nupkg.sha512"
   ],
   "logs": []
 }

@@ -12,7 +12,7 @@ namespace project_client.DTO
         public string Bytes { get; set; }
         public string RequestMethod { get; set; }
         public string URL { get; set; }
-        public string User { get; set; }
+        public string UserRequest { get; set; }
         public string HierarchyCode { get; set; }
         public string Type { get; set; }
         public TimeSpan ObjectGeneratingTime { get; set; }
